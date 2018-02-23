@@ -1,0 +1,5 @@
+{
+    "commit": "git-cz",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "version": "conventional-changelog -n ./node_modules/conventional-changelog-ovh -i CHANGELOG.md -s && git add CHANGELOG.md"
+}

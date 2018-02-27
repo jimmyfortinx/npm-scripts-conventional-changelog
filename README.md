@@ -12,8 +12,7 @@ This configuration expose three commands:
 ## Installation
 
 ```shell
-npm install --save-dev npm-scripts-config
-npm install --save-dev npm-scripts-conventional-changelog
+npm install --save-dev npm-scripts-config npm-scripts-conventional-changelog
 ```
 
 In your project you still need to specify which rules you want to use for `commitlint` and `commitizen`, but packages will already be installed. To specify those rules you need to create update the **package.json** and create a **commitlint.config.js** files:
@@ -23,6 +22,11 @@ In your project you still need to specify which rules you want to use for `commi
 ```json
 {
     [...]
+    "scripts": {
+        "commit": "npm-scripts-config commit",
+        "commitmsg": "npm-scripts-config commitmsg",
+        "version": "npm-scripts-config version"
+    },
     "config": {
         "commitizen": {
             "path": "cz-conventional-changelog"

@@ -8,3 +8,34 @@ This configuration expose three commands:
 - **version**: generates a changelog and it to the commit
 
 [commitizen](https://www.npmjs.com/package/commitizen), [commitlint](https://www.npmjs.com/package/commitlint) and [conventional-changelog](https://www.npmjs.com/package/conventional-changelog) are configured to follow [angular conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit).
+
+## Installation
+
+```shell
+npm install --save-dev npm-scripts-config
+npm install --save-dev npm-scripts-conventional-changelog
+```
+
+In your project you still need to specify which rules you want to use for `commitlint` and `commitizen`, but packages will already be installed. To specify those rules you need to create update the **package.json** and create a **commitlint.config.js** files:
+
+**package.json**
+
+```json
+{
+    [...]
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    [...]
+}
+```
+
+**commitlint.config.js**
+
+```javascript
+module.exports = {
+  extends: ["@commitlint/config-conventional"]
+}
+```

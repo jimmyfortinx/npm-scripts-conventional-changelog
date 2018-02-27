@@ -15,6 +15,15 @@ This configuration expose three commands:
 npm install --save-dev npm-scripts-config npm-scripts-conventional-changelog
 ```
 
+Create a new file that will load the configuration from this package.
+
+**.scriptsrc**
+```json
+{
+    "@extends": "npm-scripts-conventional-changelog"
+}
+```
+
 In your project you still need to specify which rules you want to use for `commitlint` and `commitizen`, but packages will already be installed. To specify those rules you need to create update the **package.json** and create a **commitlint.config.js** files:
 
 **package.json**

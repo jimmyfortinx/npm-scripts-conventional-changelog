@@ -1,6 +1,6 @@
 {
   "name": "npm-scripts-conventional-changelog",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Configuration for npm-scripts-config where conventional-changelog, commitlint and commitizen are ready to use.",
   "main": ".scriptsrc",
   "scripts": {

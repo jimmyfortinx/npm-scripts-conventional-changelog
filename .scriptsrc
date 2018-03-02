@@ -1,5 +1,6 @@
 {
     "commit": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "preview-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -u"
 }
